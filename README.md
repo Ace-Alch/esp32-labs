@@ -218,7 +218,7 @@ Open source under the [MIT License](LICENSE). In one line: **do what you like wi
 - if you deploy a version of it, say where it comes from somewhere visible, such as the footer or an about page:
 
   ```text
-  Based on ESP32 Labs by Abderrehmen Gharsallah: https://github.com/Ace-Alch/esp32-labs
+  Based on ESP32 Labs: https://github.com/agharsallah/esp-labs-web
   ```
 
 **Good to know**
