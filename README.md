@@ -1,26 +1,27 @@
 <div align="center">
 
-# ESP32 Labs: the bench guide
+# ESP32 Labs
+
+Portfolio edition maintained by **Mehdi Moallemkolaei**. Based on the [upstream ESP32 Labs bench guide](https://github.com/agharsallah/esp-labs-web).
 
 **Wire it, flash it, watch it, then read the code.**<br>
 An interactive guide to the ESP32-S3: 32 hands-on labs with live simulators, a 3D board, a pinout, a reader that explains the firmware line by line, and the chip's datasheet made readable.
 
-[![Open the live guide](https://img.shields.io/badge/open_the_live_guide-esp--labs--web.vercel.app-1f7a55?style=for-the-badge)](https://esp-labs-web.vercel.app)
+[![Open the live guide](https://img.shields.io/badge/open_the_live_guide-esp--labs--web.vercel.app-1f7a55?style=for-the-badge)](https://ace-alch.github.io/esp32-labs/)
 
 [![React 19](https://img.shields.io/badge/React-19.3-149eca?logo=react&logoColor=white)](https://react.dev)
 [![TypeScript strict](https://img.shields.io/badge/TypeScript-6.0_strict-3178c6?logo=typescript&logoColor=white)](tsconfig.app.json)
 [![Vite 8](https://img.shields.io/badge/Vite-8.3-646cff?logo=vite&logoColor=white)](https://vite.dev)
 [![12 languages](https://img.shields.io/badge/languages-12_incl._RTL-b5651d)](docs/I18N.md)
-[![CI](https://github.com/agharsallah/esp-labs-web/actions/workflows/ci.yml/badge.svg)](https://github.com/agharsallah/esp-labs-web/actions/workflows/ci.yml)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-1f7a55)](CONTRIBUTING.md)
 [![MIT License](https://img.shields.io/badge/license-MIT-1f7a55)](LICENSE)
 
-[Live guide](https://esp-labs-web.vercel.app) ·
+[Live guide](https://ace-alch.github.io/esp32-labs/) ·
 [Firmware (esp-labs)](https://github.com/agharsallah/esp-labs) ·
 [Architecture](docs/ARCHITECTURE.md) ·
 [Contributing](CONTRIBUTING.md) ·
-[Report a bug](https://github.com/agharsallah/esp-labs-web/issues/new?template=bug-report.yml) ·
-[Propose a lab](https://github.com/agharsallah/esp-labs-web/issues/new?template=new-lab.yml)
+[Report a bug](https://github.com/Ace-Alch/esp32-labs/issues/new?template=bug-report.yml) ·
+[Propose a lab](https://github.com/Ace-Alch/esp32-labs/issues/new?template=new-lab.yml)
 
 <img src="docs/media/labs-map.gif" alt="The labs map: a progress readout, the 3D ESP32-S3 DevKitC-1 with its parts lighting up one by one, then every lab grouped by theme" width="800">
 
@@ -35,7 +36,7 @@ An interactive guide to the ESP32-S3: 32 hands-on labs with live simulators, a 3
 - [Contributing](#contributing)
 - [Commands](#commands)
 - [Configuration](#configuration)
-- [Deploy to Vercel](#deploy-to-vercel)
+- [Deploy to GitHub Pages](#deploy-to-github-pages)
 - [Where things live](#where-things-live)
 - [License](#license)
 
@@ -55,7 +56,7 @@ Each lesson is one sheet: the goal, the pins it uses on a live pinout, the wirin
 
 ### The datasheet, made for makers
 
-The new **Datasheet** section ([`#/datasheet`](https://esp-labs-web.vercel.app/#/datasheet)) is about the ESP32-S3 itself. **Explore** keeps the 10% of Espressif's documents a maker needs: the chip at a glance with a 3D dive from the board down to the die, every pin and its jobs, an atlas of all 32 peripheral blocks with a page each, and memory, clocks and power modes. Each fact cites its section of the reference, the "things that bite" are called out, and the blocks your labs have used light up as you tick steps.
+The new **Datasheet** section ([`#/datasheet`](https://ace-alch.github.io/esp32-labs/#/datasheet)) is about the ESP32-S3 itself. **Explore** keeps the 10% of Espressif's documents a maker needs: the chip at a glance with a 3D dive from the board down to the die, every pin and its jobs, an atlas of all 32 peripheral blocks with a page each, and memory, clocks and power modes. Each fact cites its section of the reference, the "things that bite" are called out, and the blocks your labs have used light up as you tick steps.
 
 A citation opens that section of the reference in a side reader, and **Read** turns the board guide, module datasheet, chip datasheet and technical reference into one book you can read cover to cover, with section ticks and "Continue at". Titles follow your language; the text stays Espressif's English.
 
@@ -79,7 +80,7 @@ The guide is in English, French, Spanish, Italian, German, Polish, Turkish, Chin
 
 - **Meet the board**: the DevKitC-1 in 3D (three.js) with six callouts. Each one lights up its part and lists the labs that use it.
 - **Progress**: your ticks, the last lesson you opened and the variants you picked stay in your browser, with no account.
-- **The parts library** at [`#/parts`](https://esp-labs-web.vercel.app/#/parts): 42 isometric drawings of every component on the bench, coloured from design tokens only.
+- **The parts library** at [`#/parts`](https://ace-alch.github.io/esp32-labs/#/parts): 42 isometric drawings of every component on the bench, coloured from design tokens only.
 
 ## The labs
 
@@ -101,7 +102,7 @@ You need **Node 24.14+** and **pnpm 11** (`corepack enable` gives you the pinned
 
 ```sh
 git clone https://github.com/agharsallah/esp-labs.git
-git clone https://github.com/agharsallah/esp-labs-web.git
+git clone https://github.com/Ace-Alch/esp32-labs.git
 cd esp-labs-web
 pnpm install
 pnpm dev              # http://localhost:5180
@@ -128,13 +129,13 @@ Contributions of every size are welcome. These need no React at all:
 
 | You want to…                          | Start here                                                                                                         |
 | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Report something broken               | [Bug report](https://github.com/agharsallah/esp-labs-web/issues/new?template=bug-report.yml)                       |
-| Suggest a lab or a theme              | [Lab proposal](https://github.com/agharsallah/esp-labs-web/issues/new?template=new-lab.yml)                        |
-| Fix or improve a translation          | [Translation issue](https://github.com/agharsallah/esp-labs-web/issues/new?template=translation.yml) or edit `src/locales/<lang>/` |
+| Report something broken               | [Bug report](https://github.com/Ace-Alch/esp32-labs/issues/new?template=bug-report.yml)                       |
+| Suggest a lab or a theme              | [Lab proposal](https://github.com/Ace-Alch/esp32-labs/issues/new?template=new-lab.yml)                        |
+| Fix or improve a translation          | [Translation issue](https://github.com/Ace-Alch/esp32-labs/issues/new?template=translation.yml) or edit `src/locales/<lang>/` |
 | Fix a typo or a confusing step        | Edit the lesson in `src/content/lessons/<track>.ts` (or `<track>/<id>.ts`) and open a PR                          |
 | Add a lab, a simulator or a language  | [CONTRIBUTING.md](CONTRIBUTING.md): step by step, with the checks to run                                          |
 
-Issues labelled [`good first issue`](https://github.com/agharsallah/esp-labs-web/labels/good%20first%20issue) are a good place to start. Please read the [code of conduct](CODE_OF_CONDUCT.md); report security problems privately ([SECURITY.md](SECURITY.md)). How CI and the review rules work: [docs/MAINTAINING.md](docs/MAINTAINING.md).
+Issues labelled [`good first issue`](https://github.com/Ace-Alch/esp32-labs/labels/good%20first%20issue) are a good place to start. Please read the [code of conduct](CODE_OF_CONDUCT.md); report security problems privately ([SECURITY.md](SECURITY.md)). How CI and the review rules work: [docs/MAINTAINING.md](docs/MAINTAINING.md).
 
 ## Commands
 
@@ -162,31 +163,9 @@ Copy `.env.example` to `.env` to override:
 | `REFERENCE_FILE`       | `docs-llm/esp32-s3/ESP32-S3_REFERENCE.md`             | Build time only: Espressif's reference (with its `images/`) for the datasheet reader and book; absent, they are off |
 | `VITE_REFERENCE_URL`   | `./reference/`                                        | Where the reference sections are read (set to `""` when there is no reference) |
 
-## Deploy to Vercel
+## Deploy to GitHub Pages
 
-<details>
-<summary>Production deploys from GitHub, local prebuilt deploys, Web Analytics and Speed Insights</summary>
-
-<br>
-
-Configuration is in `vercel.json` (Vite preset, pnpm, cache and security headers). The app uses a hash router, so no rewrite rules are needed.
-
-The code reader bundles the firmware from the sibling `esp-labs` checkout at build time, and that checkout is not on Vercel's build servers. So Vercel never builds: the build runs elsewhere (`vercel build`, using `../esp-labs`) and the result is uploaded with `--prebuilt`. Git-triggered builds are turned off in `vercel.json` for the same reason.
-
-**Deploy production from GitHub.** Merging to `main` does not deploy. When you want `main` live, run the [Deploy](.github/workflows/deploy.yml) workflow (Actions → **Deploy → Run workflow**, or `gh workflow run Deploy`). It checks that CI passed on `main`'s latest commit, checks it out with the firmware, runs `vercel build --prod` and uploads it. Then it tags the commit `vX.Y.Z` and publishes a [release](https://github.com/agharsallah/esp-labs-web/releases) with its notes: the version follows the PR titles since the last tag (`feat` bumps the minor, anything else the patch, a breaking change the major from 1.0.0), and the notes group them by kind with the live URL. It also removes preview deployments older than 30 days. It needs, once (see [docs/MAINTAINING.md](docs/MAINTAINING.md#production-deploys)): a `VERCEL_TOKEN` secret and the `VERCEL_ORG_ID` and `VERCEL_PROJECT_ID` variables.
-
-Preview deploys, and production from your machine if you need it:
-
-```sh
-vercel login          # once
-vercel link           # once: creates/links the project, writes .vercel/ (git-ignored)
-pnpm deploy:preview   # preview deployment, prints its URL
-pnpm deploy:prod      # production deployment
-```
-
-Web Analytics (`@vercel/analytics`) and Speed Insights (`@vercel/speed-insights`) are mounted by `src/app/VercelInsights.tsx` only in builds made for Vercel (`vercel build` sets `VERCEL`). Dev and a plain `pnpm build` load neither. Switch both on once per project in the dashboard (**Analytics** and **Speed Insights**, then **Enable**) and redeploy. Because the router is hash-based, `#/lessons/R3` is reported as the page `/lessons/R3`.
-
-</details>
+Select GitHub Actions as the Pages source and run the Pages workflow. It builds the static guide and deploys the result. The firmware reader uses a pinned revision of the upstream companion firmware.
 
 ## Where things live
 
@@ -239,7 +218,7 @@ Open source under the [MIT License](LICENSE). In one line: **do what you like wi
 - if you deploy a version of it, say where it comes from somewhere visible, such as the footer or an about page:
 
   ```text
-  Based on ESP32 Labs by Abderrehmen Gharsallah: https://github.com/agharsallah/esp-labs-web
+  Based on ESP32 Labs by Abderrehmen Gharsallah: https://github.com/Ace-Alch/esp32-labs
   ```
 
 **Good to know**

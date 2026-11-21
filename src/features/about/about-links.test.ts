@@ -1,9 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { AUTHOR_LINKS, COFFEE_URL, ISSUES_URL, isOutside } from "./about-links";
+import { AUTHOR_LINKS, ISSUES_URL, isOutside } from "./about-links";
 
 describe("about links", () => {
   it("are all https", () => {
-    for (const href of [...AUTHOR_LINKS.map((l) => l.href), COFFEE_URL, ISSUES_URL]) {
+    for (const href of [...AUTHOR_LINKS.map((l) => l.href), ISSUES_URL]) {
       expect(new URL(href).protocol).toBe("https:");
     }
   });
